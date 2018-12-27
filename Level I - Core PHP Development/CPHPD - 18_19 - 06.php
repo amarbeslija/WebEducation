@@ -12,5 +12,6 @@
 # Alternativni link:
 # http://amarbeslija.com/ita/predavanja/corephp/vjezba1/html-stranica.zip
 
-# Primjer/rješenje ovog zadatka pronađite u folderu CPHPD - 18_19 - 06
+# Primjer/rješenje ovog zadatka pronađite u folderu CPHPD - 18_19 - 14,
+# a skinuti, zipovani fajl pronađite u CPHPD - 18_19 - 06 (za samostalan rad kasnije).
 ?>
