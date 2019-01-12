@@ -68,7 +68,7 @@
                 echo "<a href='index.php?proizvod=1'>Naredni proizvod</a>";
                 
                 //Ispisivanje svih proizvoda
-                for($i = 0; $i < count($proizvodi); $i++){
+                for($i = 1; $i < count($proizvodi)+1; $i++){
                     echo "<div class='proizvod'>";
                         echo "<h1>" . $proizvodi[$i]['name'] . " | <span class='red'>" . $proizvodi[$i]['price'] . "</span> Euro </h1>";
                         echo "<img src='" . $proizvodi[$i]['image'] . "' alt='" . $proizvodi[$i]['name'] . "'>";
