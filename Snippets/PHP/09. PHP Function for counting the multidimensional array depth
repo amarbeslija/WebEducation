@@ -1,0 +1,16 @@
+<?php
+
+# Function for counting dimensions
+  function count_dimension($Array, $count = 0) {
+      # Note: This doesn't count the main array from which all begins. If you want that, just change $count to 1 from 0
+      if(is_array($Array)) {
+         return count_dimension(current($Array), ++$count);
+      } else {
+         return $count;
+      }
+   }
+
+  # Get number of dimensions
+  $dimensions = count_dimension($myArray);
+  
+?>
