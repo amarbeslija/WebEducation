@@ -1,0 +1,28 @@
+<?php
+# This one is about how to build an multimedinsional array for needs like multi-level menu
+# The first concern is that you rember which item belongs to which parent in database (item_parent_id here)
+# The second thing is that you need to get an one-dimensional associative array from the database, which you will sort with code below
+
+# So, when we have an array, we can do something like this:
+
+function buildLevels(array $array, $parent_id = 0) {
+  # Create helper array
+  $level = array();
+  
+  # Go through the array
+  foreach ($array as $element) {
+     if ($element['item_parent_id'] == $parent_id) {
+         $children = buildLevels($array, $element['id']);
+         if ($children) {
+             $element['children'] = $children;
+         }
+         $level[] = $element;
+     }
+  }
+
+  return $level;
+ }
+
+$multidimensionalArray = buildLevels($myArray);
+
+?>
